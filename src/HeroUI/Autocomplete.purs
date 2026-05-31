@@ -6,7 +6,8 @@ import Effect (Effect)
 import Effect.Uncurried (EffectFn1)
 import React.Basic (JSX)
 import Yoga.React.DOM.Internal (class IsJSX)
-import Data.Function.Uncurried (runFn4)
+import Data.Function.Uncurried (Fn2, mkFn2, runFn4)
+import Data.String (Pattern(..), contains, toLower)
 import HeroUI.Types (FieldVariant, fieldVariantToString)
 import HeroUI.Internal (class CoerceHeroProps, createElementTransformImpl)
 import HeroUI.Raw as Raw
@@ -77,6 +78,30 @@ autocompletePopover
   -> kids
   -> JSX
 autocompletePopover props kids = runFn4 createElementTransformImpl {} Raw.autocompletePopover props kids
+
+-- | Wraps the search `input` + the options collection inside the popover;
+-- | this is what makes the autocomplete typeable. Pass `filter` to narrow the
+-- | options as the user types (see `containsFilter` for the common case).
+type AutocompleteFilterProps r =
+  ( filter :: Fn2 String String Boolean
+  , className :: String
+  | r
+  )
+
+autocompleteFilter
+  :: forall givenProps nonDataProps kids
+   . IsJSX kids
+  => CoerceHeroProps { | givenProps } { | nonDataProps } { | AutocompleteFilterProps () }
+  => { | givenProps }
+  -> kids
+  -> JSX
+autocompleteFilter props kids = runFn4 createElementTransformImpl {} Raw.autocompleteFilter props kids
+
+-- | Case-insensitive substring match — the usual `filter` for `autocompleteFilter`.
+-- | react-aria calls it as `filter optionTextValue typedInput`; keep an option
+-- | when what the user typed appears anywhere in its `textValue`.
+containsFilter :: Fn2 String String Boolean
+containsFilter = mkFn2 \optionText typed -> contains (Pattern (toLower typed)) (toLower optionText)
 
 autocompleteClearButton
   :: forall givenProps nonDataProps kids

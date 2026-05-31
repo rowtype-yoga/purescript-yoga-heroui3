@@ -87,6 +87,7 @@ import {
   AutocompleteIndicator,
   AutocompletePopover,
   AutocompleteClearButton,
+  AutocompleteFilter,
   DateFieldRoot,
   TimeFieldRoot,
   DatePickerRoot,
@@ -338,6 +339,7 @@ export const autocompleteValue = AutocompleteValue;
 export const autocompleteIndicator = AutocompleteIndicator;
 export const autocompletePopover = AutocompletePopover;
 export const autocompleteClearButton = AutocompleteClearButton;
+export const autocompleteFilter = AutocompleteFilter;
 
 // DateField / TimeField
 export const dateField = DateFieldRoot;

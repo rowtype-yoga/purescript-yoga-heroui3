@@ -4,6 +4,7 @@ import Prelude hiding (div)
 
 import React.Basic (JSX)
 import HeroUI.Autocomplete as Autocomplete
+import HeroUI.Input as Input
 import HeroUI.ListBox as ListBox
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
@@ -18,10 +19,16 @@ mkAutocomplete = component "AutocompleteStory" \props -> React.do
             , Autocomplete.autocompleteIndicator {} ([] :: Array JSX)
             ]
         , Autocomplete.autocompletePopover {}
-            [ ListBox.listBox {}
-                [ ListBox.listBoxItem { id: "apple" } "Apple"
-                , ListBox.listBoxItem { id: "banana" } "Banana"
-                , ListBox.listBoxItem { id: "cherry" } "Cherry"
+            [ Autocomplete.autocompleteFilter { filter: Autocomplete.containsFilter }
+                [ Input.textField { "aria-label": "Search fruit" }
+                    [ Input.input { placeholder: "Type to filter…" } ([] :: Array JSX) ]
+                , ListBox.listBox {}
+                    [ ListBox.listBoxItem { id: "apple", textValue: "Apple" } "Apple"
+                    , ListBox.listBoxItem { id: "banana", textValue: "Banana" } "Banana"
+                    , ListBox.listBoxItem { id: "cherry", textValue: "Cherry" } "Cherry"
+                    , ListBox.listBoxItem { id: "date", textValue: "Date" } "Date"
+                    , ListBox.listBoxItem { id: "elderberry", textValue: "Elderberry" } "Elderberry"
+                    ]
                 ]
             ]
         ]

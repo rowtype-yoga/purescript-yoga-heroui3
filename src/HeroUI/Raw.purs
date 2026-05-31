@@ -137,6 +137,7 @@ foreign import autocompleteValue :: forall r. ReactComponent { | r }
 foreign import autocompleteIndicator :: forall r. ReactComponent { | r }
 foreign import autocompletePopover :: forall r. ReactComponent { | r }
 foreign import autocompleteClearButton :: forall r. ReactComponent { | r }
+foreign import autocompleteFilter :: forall r. ReactComponent { | r }
 
 -- DateField / TimeField
 foreign import dateField :: forall r. ReactComponent { | r }
