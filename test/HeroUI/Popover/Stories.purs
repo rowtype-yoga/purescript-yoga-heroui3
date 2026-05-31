@@ -14,9 +14,9 @@ mkPopover :: {} -> JSX
 mkPopover = component "PopoverStory" \(_ :: {}) -> React.do
   pure $ div { className: "dark bg-background text-foreground p-6 rounded-lg" }
     [ Popover.popover {}
-        [ Popover.popoverTrigger {} [ Btn.button { variant: Btn.Primary } (text "Open popover") ]
+        [ Popover.popoverTrigger {} [ Btn.button { variant: Btn.Primary } "Open popover" ]
         , Popover.popoverContent { placement: "bottom", showArrow: true }
-            [ Popover.popoverHeading {} (text "Heading")
+            [ Popover.popoverHeading {} "Heading"
             , text "Popover content."
             ]
         ]

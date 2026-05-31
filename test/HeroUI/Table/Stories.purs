@@ -7,14 +7,13 @@ import HeroUI.Table as Table
 import HeroUI.Types as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Story (story)
 
 row :: String -> String -> String -> JSX
 row key name role =
   Table.tableRow { id: key }
-    [ Table.tableCell {} (text name)
-    , Table.tableCell {} (text role)
+    [ Table.tableCell {} name
+    , Table.tableCell {} role
     ]
 
 mkTable :: {} -> JSX
@@ -23,8 +22,8 @@ mkTable = component "TableStory" \(_ :: {}) -> React.do
     [ Table.table {}
         [ Table.tableContent { selectionMode: T.Multiple, "aria-label": "People" }
             [ Table.tableHeader {}
-                [ Table.tableColumn { id: "name", isRowHeader: true } (text "Name")
-                , Table.tableColumn { id: "role" } (text "Role")
+                [ Table.tableColumn { id: "name", isRowHeader: true } "Name"
+                , Table.tableColumn { id: "role" } "Role"
                 ]
             , Table.tableBody {}
                 [ row "1" "Alice" "Admin"

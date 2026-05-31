@@ -8,7 +8,6 @@ import HeroUI.Button as Btn
 import HeroUI.Types as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story)
 
@@ -45,7 +44,7 @@ mkButton = component "ButtonStory" \props -> React.do
         , size: toSize props.size
         , isDisabled: props.isDisabled
         }
-        (text props.label)
+        props.label
     ]
 
 primary :: JSX

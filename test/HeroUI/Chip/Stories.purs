@@ -8,7 +8,6 @@ import HeroUI.Chip as Chip
 import HeroUI.Types as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story)
 
@@ -26,7 +25,7 @@ toVariant = case _ of
 mkChip :: { label :: String, variant :: Variant } -> JSX
 mkChip = component "ChipStory" \props -> React.do
   pure $ div { className: "dark bg-background text-foreground p-6 rounded-lg flex items-center gap-4" }
-    [ Chip.chip { color: T.Accent, size: T.Md, variant: toVariant props.variant } (text props.label) ]
+    [ Chip.chip { color: T.Accent, size: T.Md, variant: toVariant props.variant } props.label ]
 
 basic :: JSX
 basic = story "basic" mkChip { label: "new", variant: enum Soft }

@@ -6,14 +6,13 @@ import React.Basic (JSX)
 import HeroUI.Accordion as Accordion
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Story (story)
 
 item :: String -> String -> String -> JSX
 item key heading body =
   Accordion.accordionItem { id: key }
-    [ Accordion.accordionHeading {} [ Accordion.accordionTrigger {} (text heading) ]
-    , Accordion.accordionPanel {} [ Accordion.accordionBody {} (text body) ]
+    [ Accordion.accordionHeading {} [ Accordion.accordionTrigger {} heading ]
+    , Accordion.accordionPanel {} [ Accordion.accordionBody {} body ]
     ]
 
 mkAccordion :: {} -> JSX

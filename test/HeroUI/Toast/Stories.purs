@@ -16,7 +16,7 @@ mkToast = component "ToastStory" \props -> React.do
   pure $ div { className: "dark bg-background text-foreground p-6 rounded-lg" }
     [ Toast.toastProvider { placement: "bottom-right" } ([] :: Array JSX)
     , Btn.button { variant: Btn.Primary, onPress: handler_ (void (Toast.toastSuccess (text props.message))) }
-        (text "Show toast")
+        "Show toast"
     ]
 
 basic :: JSX

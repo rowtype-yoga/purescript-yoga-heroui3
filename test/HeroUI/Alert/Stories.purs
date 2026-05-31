@@ -8,7 +8,6 @@ import HeroUI.Alert as Alert
 import HeroUI.Types as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story)
 
@@ -30,8 +29,8 @@ mkAlert = component "AlertStory" \props -> React.do
     [ Alert.alert { status: toStatus props.status }
         [ Alert.alertIndicator {} ([] :: Array JSX)
         , Alert.alertContent {}
-            [ Alert.alertTitle {} (text props.title)
-            , Alert.alertDescription {} (text props.body)
+            [ Alert.alertTitle {} props.title
+            , Alert.alertDescription {} props.body
             ]
         ]
     ]

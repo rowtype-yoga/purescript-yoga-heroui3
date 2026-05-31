@@ -7,16 +7,15 @@ import HeroUI.Radio as Radio
 import HeroUI.Types as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Story (story)
 
 mkRadio :: { defaultValue :: String } -> JSX
 mkRadio = component "RadioStory" \props -> React.do
   pure $ div { className: "dark bg-background text-foreground p-6 rounded-lg" }
     [ Radio.radioGroup { defaultValue: props.defaultValue, orientation: T.Vertical, variant: T.Primary }
-        [ Radio.radio { value: "a" } (text "Option A")
-        , Radio.radio { value: "b" } (text "Option B")
-        , Radio.radio { value: "c" } (text "Option C")
+        [ Radio.radio { value: "a" } "Option A"
+        , Radio.radio { value: "b" } "Option B"
+        , Radio.radio { value: "c" } "Option C"
         ]
     ]
 
