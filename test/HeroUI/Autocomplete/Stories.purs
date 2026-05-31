@@ -13,12 +13,16 @@ import YogaStories.Story (story)
 mkAutocomplete :: { placeholder :: String } -> JSX
 mkAutocomplete = component "AutocompleteStory" \props -> React.do
   pure $ div { className: "dark bg-background text-foreground p-6 rounded-lg w-64" }
-    [ Autocomplete.autocomplete { placeholder: props.placeholder }
-        [ Autocomplete.autocompleteTrigger {} ([] :: Array JSX)
+    [ Autocomplete.autocomplete { placeholder: props.placeholder, defaultSelectedKey: "apple", "aria-label": "Fruit" }
+        [ Autocomplete.autocompleteTrigger {}
+            [ Autocomplete.autocompleteValue {} ([] :: Array JSX)
+            , Autocomplete.autocompleteIndicator {} ([] :: Array JSX)
+            ]
         , Autocomplete.autocompletePopover {}
             [ ListBox.listBox {}
                 [ ListBox.listBoxItem { id: "apple" } (text "Apple")
                 , ListBox.listBoxItem { id: "banana" } (text "Banana")
+                , ListBox.listBoxItem { id: "cherry" } (text "Cherry")
                 ]
             ]
         ]
