@@ -52,10 +52,13 @@ autocompleteTrigger
   -> JSX
 autocompleteTrigger props kids = runFn4 createElementTransformImpl {} Raw.autocompleteTrigger props kids
 
+-- | Shows the selected option's text, or `placeholder` when nothing is selected.
+type AutocompleteValueProps r = (placeholder :: String, className :: String | r)
+
 autocompleteValue
   :: forall givenProps nonDataProps kids
    . IsJSX kids
-  => CoerceHeroProps { | givenProps } { | nonDataProps } { | SectionProps () }
+  => CoerceHeroProps { | givenProps } { | nonDataProps } { | AutocompleteValueProps () }
   => { | givenProps }
   -> kids
   -> JSX
