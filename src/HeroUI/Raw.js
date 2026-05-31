@@ -18,6 +18,27 @@ import {
   BadgeAnchor,
   SkeletonRoot,
   SeparatorRoot,
+  CardRoot,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  ScrollShadowRoot,
+  AccordionRoot,
+  AccordionItem,
+  AccordionHeading,
+  AccordionTrigger,
+  AccordionPanel,
+  AccordionIndicator,
+  AccordionBody,
+  TabsRoot,
+  TabListContainer,
+  TabList,
+  Tab,
+  TabIndicator,
+  TabSeparator,
+  TabPanel,
 } from "@heroui/react";
 
 // Button
@@ -56,3 +77,32 @@ export const skeleton = SkeletonRoot;
 
 // Separator
 export const separator = SeparatorRoot;
+
+// Card
+export const card = CardRoot;
+export const cardHeader = CardHeader;
+export const cardTitle = CardTitle;
+export const cardDescription = CardDescription;
+export const cardContent = CardContent;
+export const cardFooter = CardFooter;
+
+// ScrollShadow
+export const scrollShadow = ScrollShadowRoot;
+
+// Accordion
+export const accordion = AccordionRoot;
+export const accordionItem = AccordionItem;
+export const accordionHeading = AccordionHeading;
+export const accordionTrigger = AccordionTrigger;
+export const accordionPanel = AccordionPanel;
+export const accordionIndicator = AccordionIndicator;
+export const accordionBody = AccordionBody;
+
+// Tabs
+export const tabs = TabsRoot;
+export const tabListContainer = TabListContainer;
+export const tabList = TabList;
+export const tab = Tab;
+export const tabIndicator = TabIndicator;
+export const tabSeparator = TabSeparator;
+export const tabPanel = TabPanel;

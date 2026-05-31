@@ -38,3 +38,32 @@ foreign import skeleton :: forall r. ReactComponent { | r }
 
 -- Separator
 foreign import separator :: forall r. ReactComponent { | r }
+
+-- Card
+foreign import card :: forall r. ReactComponent { | r }
+foreign import cardHeader :: forall r. ReactComponent { | r }
+foreign import cardTitle :: forall r. ReactComponent { | r }
+foreign import cardDescription :: forall r. ReactComponent { | r }
+foreign import cardContent :: forall r. ReactComponent { | r }
+foreign import cardFooter :: forall r. ReactComponent { | r }
+
+-- ScrollShadow
+foreign import scrollShadow :: forall r. ReactComponent { | r }
+
+-- Accordion
+foreign import accordion :: forall r. ReactComponent { | r }
+foreign import accordionItem :: forall r. ReactComponent { | r }
+foreign import accordionHeading :: forall r. ReactComponent { | r }
+foreign import accordionTrigger :: forall r. ReactComponent { | r }
+foreign import accordionPanel :: forall r. ReactComponent { | r }
+foreign import accordionIndicator :: forall r. ReactComponent { | r }
+foreign import accordionBody :: forall r. ReactComponent { | r }
+
+-- Tabs
+foreign import tabs :: forall r. ReactComponent { | r }
+foreign import tabListContainer :: forall r. ReactComponent { | r }
+foreign import tabList :: forall r. ReactComponent { | r }
+foreign import tab :: forall r. ReactComponent { | r }
+foreign import tabIndicator :: forall r. ReactComponent { | r }
+foreign import tabSeparator :: forall r. ReactComponent { | r }
+foreign import tabPanel :: forall r. ReactComponent { | r }
