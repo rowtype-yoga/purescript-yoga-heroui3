@@ -232,3 +232,58 @@ foreign import menuItem :: forall r. ReactComponent { | r }
 foreign import menuItemIndicator :: forall r. ReactComponent { | r }
 foreign import menuItemSubmenuIndicator :: forall r. ReactComponent { | r }
 foreign import menuSection :: forall r. ReactComponent { | r }
+
+-- Table
+foreign import table :: forall r. ReactComponent { | r }
+foreign import tableScrollContainer :: forall r. ReactComponent { | r }
+foreign import tableContent :: forall r. ReactComponent { | r }
+foreign import tableHeader :: forall r. ReactComponent { | r }
+foreign import tableColumn :: forall r. ReactComponent { | r }
+foreign import tableBody :: forall r. ReactComponent { | r }
+foreign import tableRow :: forall r. ReactComponent { | r }
+foreign import tableCell :: forall r. ReactComponent { | r }
+foreign import tableFooter :: forall r. ReactComponent { | r }
+
+-- Pagination
+foreign import pagination :: forall r. ReactComponent { | r }
+foreign import paginationSummary :: forall r. ReactComponent { | r }
+foreign import paginationContent :: forall r. ReactComponent { | r }
+foreign import paginationItem :: forall r. ReactComponent { | r }
+foreign import paginationLink :: forall r. ReactComponent { | r }
+foreign import paginationPrevious :: forall r. ReactComponent { | r }
+foreign import paginationPreviousIcon :: forall r. ReactComponent { | r }
+foreign import paginationNext :: forall r. ReactComponent { | r }
+foreign import paginationNextIcon :: forall r. ReactComponent { | r }
+foreign import paginationEllipsis :: forall r. ReactComponent { | r }
+
+-- Breadcrumbs
+foreign import breadcrumbs :: forall r. ReactComponent { | r }
+foreign import breadcrumbsItem :: forall r. ReactComponent { | r }
+
+-- ProgressBar
+foreign import progressBar :: forall r. ReactComponent { | r }
+foreign import progressBarOutput :: forall r. ReactComponent { | r }
+foreign import progressBarTrack :: forall r. ReactComponent { | r }
+foreign import progressBarFill :: forall r. ReactComponent { | r }
+
+-- ProgressCircle
+foreign import progressCircle :: forall r. ReactComponent { | r }
+foreign import progressCircleTrack :: forall r. ReactComponent { | r }
+foreign import progressCircleTrackCircle :: forall r. ReactComponent { | r }
+foreign import progressCircleFillCircle :: forall r. ReactComponent { | r }
+
+-- Alert
+foreign import alert :: forall r. ReactComponent { | r }
+foreign import alertIndicator :: forall r. ReactComponent { | r }
+foreign import alertContent :: forall r. ReactComponent { | r }
+foreign import alertTitle :: forall r. ReactComponent { | r }
+foreign import alertDescription :: forall r. ReactComponent { | r }
+
+-- Toast
+foreign import toastProvider :: forall r. ReactComponent { | r }
+foreign import toastContent :: forall r. ReactComponent { | r }
+foreign import toastIndicator :: forall r. ReactComponent { | r }
+foreign import toastTitle :: forall r. ReactComponent { | r }
+foreign import toastDescription :: forall r. ReactComponent { | r }
+foreign import toastActionButton :: forall r. ReactComponent { | r }
+foreign import toastCloseButton :: forall r. ReactComponent { | r }

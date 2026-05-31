@@ -160,6 +160,47 @@ import {
   MenuItemIndicator,
   MenuItemSubmenuIndicator,
   MenuSectionRoot,
+  TableRoot,
+  TableScrollContainer,
+  TableContent,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableFooter,
+  PaginationRoot,
+  PaginationSummary,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationPrevious,
+  PaginationPreviousIcon,
+  PaginationNext,
+  PaginationNextIcon,
+  PaginationEllipsis,
+  BreadcrumbsRoot,
+  BreadcrumbsItem,
+  ProgressBarRoot,
+  ProgressBarOutput,
+  ProgressBarTrack,
+  ProgressBarFill,
+  ProgressCircleRoot,
+  ProgressCircleTrack,
+  ProgressCircleTrackCircle,
+  ProgressCircleFillCircle,
+  AlertRoot,
+  AlertIndicator,
+  AlertContent,
+  AlertTitle,
+  AlertDescription,
+  ToastProvider,
+  ToastContent,
+  ToastIndicator,
+  ToastTitle,
+  ToastDescription,
+  ToastActionButton,
+  ToastCloseButton,
 } from "@heroui/react";
 
 // Button
@@ -392,3 +433,58 @@ export const menuItem = MenuItemRoot;
 export const menuItemIndicator = MenuItemIndicator;
 export const menuItemSubmenuIndicator = MenuItemSubmenuIndicator;
 export const menuSection = MenuSectionRoot;
+
+// Table
+export const table = TableRoot;
+export const tableScrollContainer = TableScrollContainer;
+export const tableContent = TableContent;
+export const tableHeader = TableHeader;
+export const tableColumn = TableColumn;
+export const tableBody = TableBody;
+export const tableRow = TableRow;
+export const tableCell = TableCell;
+export const tableFooter = TableFooter;
+
+// Pagination
+export const pagination = PaginationRoot;
+export const paginationSummary = PaginationSummary;
+export const paginationContent = PaginationContent;
+export const paginationItem = PaginationItem;
+export const paginationLink = PaginationLink;
+export const paginationPrevious = PaginationPrevious;
+export const paginationPreviousIcon = PaginationPreviousIcon;
+export const paginationNext = PaginationNext;
+export const paginationNextIcon = PaginationNextIcon;
+export const paginationEllipsis = PaginationEllipsis;
+
+// Breadcrumbs
+export const breadcrumbs = BreadcrumbsRoot;
+export const breadcrumbsItem = BreadcrumbsItem;
+
+// ProgressBar
+export const progressBar = ProgressBarRoot;
+export const progressBarOutput = ProgressBarOutput;
+export const progressBarTrack = ProgressBarTrack;
+export const progressBarFill = ProgressBarFill;
+
+// ProgressCircle
+export const progressCircle = ProgressCircleRoot;
+export const progressCircleTrack = ProgressCircleTrack;
+export const progressCircleTrackCircle = ProgressCircleTrackCircle;
+export const progressCircleFillCircle = ProgressCircleFillCircle;
+
+// Alert
+export const alert = AlertRoot;
+export const alertIndicator = AlertIndicator;
+export const alertContent = AlertContent;
+export const alertTitle = AlertTitle;
+export const alertDescription = AlertDescription;
+
+// Toast
+export const toastProvider = ToastProvider;
+export const toastContent = ToastContent;
+export const toastIndicator = ToastIndicator;
+export const toastTitle = ToastTitle;
+export const toastDescription = ToastDescription;
+export const toastActionButton = ToastActionButton;
+export const toastCloseButton = ToastCloseButton;
