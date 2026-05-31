@@ -31,6 +31,30 @@ sizeToString = case _ of
   Md -> "md"
   Lg -> "lg"
 
+-- | The `primary | secondary` field variant shared by HeroUI v3 form
+-- | controls (Input, Textarea, NumberField, Select, Checkbox, ...).
+data FieldVariant = Primary | Secondary
+
+derive instance Eq FieldVariant
+derive instance Ord FieldVariant
+
+fieldVariantToString :: FieldVariant -> String
+fieldVariantToString = case _ of
+  Primary -> "primary"
+  Secondary -> "secondary"
+
+-- | Selection mode for collection components (ListBox, Menu, Table, ...).
+data SelectionMode = SelectionNone | Single | Multiple
+
+derive instance Eq SelectionMode
+derive instance Ord SelectionMode
+
+selectionModeToString :: SelectionMode -> String
+selectionModeToString = case _ of
+  SelectionNone -> "none"
+  Single -> "single"
+  Multiple -> "multiple"
+
 data Orientation = Horizontal | Vertical
 
 derive instance Eq Orientation
