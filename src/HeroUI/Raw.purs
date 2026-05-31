@@ -174,3 +174,61 @@ foreign import rangeCalendarHeading :: forall r. ReactComponent { | r }
 foreign import rangeCalendarNavButton :: forall r. ReactComponent { | r }
 foreign import rangeCalendarGrid :: forall r. ReactComponent { | r }
 foreign import rangeCalendarCell :: forall r. ReactComponent { | r }
+
+-- Modal
+foreign import modal :: forall r. ReactComponent { | r }
+foreign import modalTrigger :: forall r. ReactComponent { | r }
+foreign import modalBackdrop :: forall r. ReactComponent { | r }
+foreign import modalContainer :: forall r. ReactComponent { | r }
+foreign import modalDialog :: forall r. ReactComponent { | r }
+foreign import modalHeader :: forall r. ReactComponent { | r }
+foreign import modalIcon :: forall r. ReactComponent { | r }
+foreign import modalHeading :: forall r. ReactComponent { | r }
+foreign import modalBody :: forall r. ReactComponent { | r }
+foreign import modalFooter :: forall r. ReactComponent { | r }
+foreign import modalCloseTrigger :: forall r. ReactComponent { | r }
+
+-- Drawer
+foreign import drawer :: forall r. ReactComponent { | r }
+foreign import drawerTrigger :: forall r. ReactComponent { | r }
+foreign import drawerBackdrop :: forall r. ReactComponent { | r }
+foreign import drawerContent :: forall r. ReactComponent { | r }
+foreign import drawerDialog :: forall r. ReactComponent { | r }
+foreign import drawerHeader :: forall r. ReactComponent { | r }
+foreign import drawerHeading :: forall r. ReactComponent { | r }
+foreign import drawerBody :: forall r. ReactComponent { | r }
+foreign import drawerFooter :: forall r. ReactComponent { | r }
+foreign import drawerHandle :: forall r. ReactComponent { | r }
+foreign import drawerCloseTrigger :: forall r. ReactComponent { | r }
+
+-- Popover
+foreign import popover :: forall r. ReactComponent { | r }
+foreign import popoverTrigger :: forall r. ReactComponent { | r }
+foreign import popoverContent :: forall r. ReactComponent { | r }
+foreign import popoverDialog :: forall r. ReactComponent { | r }
+foreign import popoverHeading :: forall r. ReactComponent { | r }
+foreign import popoverArrow :: forall r. ReactComponent { | r }
+
+-- Tooltip
+foreign import tooltip :: forall r. ReactComponent { | r }
+foreign import tooltipTrigger :: forall r. ReactComponent { | r }
+foreign import tooltipContent :: forall r. ReactComponent { | r }
+foreign import tooltipArrow :: forall r. ReactComponent { | r }
+
+-- Dropdown
+foreign import dropdown :: forall r. ReactComponent { | r }
+foreign import dropdownTrigger :: forall r. ReactComponent { | r }
+foreign import dropdownPopover :: forall r. ReactComponent { | r }
+foreign import dropdownMenu :: forall r. ReactComponent { | r }
+foreign import dropdownSection :: forall r. ReactComponent { | r }
+foreign import dropdownItem :: forall r. ReactComponent { | r }
+foreign import dropdownItemIndicator :: forall r. ReactComponent { | r }
+foreign import dropdownSubmenuIndicator :: forall r. ReactComponent { | r }
+foreign import dropdownSubmenuTrigger :: forall r. ReactComponent { | r }
+
+-- Menu
+foreign import menu :: forall r. ReactComponent { | r }
+foreign import menuItem :: forall r. ReactComponent { | r }
+foreign import menuItemIndicator :: forall r. ReactComponent { | r }
+foreign import menuItemSubmenuIndicator :: forall r. ReactComponent { | r }
+foreign import menuSection :: forall r. ReactComponent { | r }

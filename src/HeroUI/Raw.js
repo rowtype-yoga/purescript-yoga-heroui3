@@ -114,6 +114,52 @@ import {
   RangeCalendarNavButton,
   RangeCalendarGrid,
   RangeCalendarCell,
+  ModalRoot,
+  ModalTrigger,
+  ModalBackdrop,
+  ModalContainer,
+  ModalDialog,
+  ModalHeader,
+  ModalIcon,
+  ModalHeading,
+  ModalBody,
+  ModalFooter,
+  ModalCloseTrigger,
+  DrawerRoot,
+  DrawerTrigger,
+  DrawerBackdrop,
+  DrawerContent,
+  DrawerDialog,
+  DrawerHeader,
+  DrawerHeading,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHandle,
+  DrawerCloseTrigger,
+  PopoverRoot,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverDialog,
+  PopoverHeading,
+  PopoverArrow,
+  TooltipRoot,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipArrow,
+  DropdownRoot,
+  DropdownTrigger,
+  DropdownPopover,
+  DropdownMenu,
+  DropdownSection,
+  DropdownItem,
+  DropdownItemIndicator,
+  DropdownSubmenuIndicator,
+  DropdownSubmenuTrigger,
+  MenuRoot,
+  MenuItemRoot,
+  MenuItemIndicator,
+  MenuItemSubmenuIndicator,
+  MenuSectionRoot,
 } from "@heroui/react";
 
 // Button
@@ -288,3 +334,61 @@ export const rangeCalendarHeading = RangeCalendarHeading;
 export const rangeCalendarNavButton = RangeCalendarNavButton;
 export const rangeCalendarGrid = RangeCalendarGrid;
 export const rangeCalendarCell = RangeCalendarCell;
+
+// Modal
+export const modal = ModalRoot;
+export const modalTrigger = ModalTrigger;
+export const modalBackdrop = ModalBackdrop;
+export const modalContainer = ModalContainer;
+export const modalDialog = ModalDialog;
+export const modalHeader = ModalHeader;
+export const modalIcon = ModalIcon;
+export const modalHeading = ModalHeading;
+export const modalBody = ModalBody;
+export const modalFooter = ModalFooter;
+export const modalCloseTrigger = ModalCloseTrigger;
+
+// Drawer
+export const drawer = DrawerRoot;
+export const drawerTrigger = DrawerTrigger;
+export const drawerBackdrop = DrawerBackdrop;
+export const drawerContent = DrawerContent;
+export const drawerDialog = DrawerDialog;
+export const drawerHeader = DrawerHeader;
+export const drawerHeading = DrawerHeading;
+export const drawerBody = DrawerBody;
+export const drawerFooter = DrawerFooter;
+export const drawerHandle = DrawerHandle;
+export const drawerCloseTrigger = DrawerCloseTrigger;
+
+// Popover
+export const popover = PopoverRoot;
+export const popoverTrigger = PopoverTrigger;
+export const popoverContent = PopoverContent;
+export const popoverDialog = PopoverDialog;
+export const popoverHeading = PopoverHeading;
+export const popoverArrow = PopoverArrow;
+
+// Tooltip
+export const tooltip = TooltipRoot;
+export const tooltipTrigger = TooltipTrigger;
+export const tooltipContent = TooltipContent;
+export const tooltipArrow = TooltipArrow;
+
+// Dropdown
+export const dropdown = DropdownRoot;
+export const dropdownTrigger = DropdownTrigger;
+export const dropdownPopover = DropdownPopover;
+export const dropdownMenu = DropdownMenu;
+export const dropdownSection = DropdownSection;
+export const dropdownItem = DropdownItem;
+export const dropdownItemIndicator = DropdownItemIndicator;
+export const dropdownSubmenuIndicator = DropdownSubmenuIndicator;
+export const dropdownSubmenuTrigger = DropdownSubmenuTrigger;
+
+// Menu
+export const menu = MenuRoot;
+export const menuItem = MenuItemRoot;
+export const menuItemIndicator = MenuItemIndicator;
+export const menuItemSubmenuIndicator = MenuItemSubmenuIndicator;
+export const menuSection = MenuSectionRoot;
