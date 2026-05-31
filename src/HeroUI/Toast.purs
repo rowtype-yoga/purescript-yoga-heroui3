@@ -9,6 +9,7 @@ import Yoga.React.DOM.Internal (class IsJSX)
 import Data.Function.Uncurried (runFn4)
 import HeroUI.Internal (class CoerceHeroProps, createElementTransformImpl)
 import HeroUI.Raw as Raw
+import Unsafe.Coerce (unsafeCoerce)
 
 -- Render the provider once near the root of the app; fire toasts imperatively.
 type ToastProviderProps r =
@@ -64,17 +65,19 @@ foreign import closeAllToastsImpl :: Effect Unit
 foreign import pauseAllToastsImpl :: Effect Unit
 foreign import resumeAllToastsImpl :: Effect Unit
 
-toastSuccess :: JSX -> Effect String
-toastSuccess = runEffectFn1 toastSuccessImpl
+-- | The message accepts anything renderable (`IsJSX`): a plain `String`, a
+-- | `JSX` element, or an `Array JSX`.
+toastSuccess :: forall msg. IsJSX msg => msg -> Effect String
+toastSuccess msg = runEffectFn1 toastSuccessImpl (unsafeCoerce msg)
 
-toastDanger :: JSX -> Effect String
-toastDanger = runEffectFn1 toastDangerImpl
+toastDanger :: forall msg. IsJSX msg => msg -> Effect String
+toastDanger msg = runEffectFn1 toastDangerImpl (unsafeCoerce msg)
 
-toastInfo :: JSX -> Effect String
-toastInfo = runEffectFn1 toastInfoImpl
+toastInfo :: forall msg. IsJSX msg => msg -> Effect String
+toastInfo msg = runEffectFn1 toastInfoImpl (unsafeCoerce msg)
 
-toastWarning :: JSX -> Effect String
-toastWarning = runEffectFn1 toastWarningImpl
+toastWarning :: forall msg. IsJSX msg => msg -> Effect String
+toastWarning msg = runEffectFn1 toastWarningImpl (unsafeCoerce msg)
 
 closeToast :: String -> Effect Unit
 closeToast = runEffectFn1 closeToastImpl
