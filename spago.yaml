@@ -1,0 +1,55 @@
+workspace:
+  extraPackages:
+    react-testing-library:
+      git: https://github.com/i-am-the-slime/purescript-react-testing-library.git
+      ref: fd679db77337485058907ba5c6cbac3b478de342
+
+package:
+  name: yoga-heroui3
+  publish:
+    version: 3.0.0
+    license: WTFPL
+    location:
+      githubOwner: rowtype-yoga
+      githubRepo: purescript-yoga-heroui3
+  dependencies:
+    - effect: ">=4.0.0 <5.0.0"
+    - foreign: ">=7.0.0 <8.0.0"
+    - functions: ">=6.0.0 <7.0.0"
+    - maybe: ">=6.0.0 <7.0.0"
+    - nullable: ">=6.0.0 <7.0.0"
+    - prelude: ">=6.0.2 <7.0.0"
+    - react-basic: ">=17.0.0 <18.0.0"
+    - react-basic-hooks: ">=8.2.0 <9.0.0"
+    - typelevel-prelude: ">=7.0.0 <8.0.0"
+    - unsafe-coerce: ">=6.0.0 <7.0.0"
+    - yoga-react-dom: ">=1.0.3 <2.0.0"
+  test:
+    main: Test.Main
+    dependencies:
+      - yoga-stories
+      - yoga-react
+      - react-basic-dom
+      - react-basic-hooks
+      - arrays
+      - maybe
+      - tuples
+      - yoga-json
+      - web-html
+      - web-events
+      - record
+      - newtype
+      - strings
+      - aff
+      - js-promise
+      - js-promise-aff
+      - unsafe-coerce
+      - console
+      - react-testing-library
+      - spec
+      - transformers
+      - effect
+      - foreign
+      - prelude
+      - exceptions
+      - aff-promise

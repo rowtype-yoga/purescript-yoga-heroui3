@@ -1,0 +1,25 @@
+{
+  "name": "purescript-yoga-heroui3",
+  "type": "module",
+  "version": "0.1.0",
+  "dependencies": {
+    "@heroui/react": "^3.1.0",
+    "@heroui/styles": "^3.1.0",
+    "yoga-stories": "0.1.5"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19",
+    "tailwindcss": ">=4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@testing-library/react": "^16",
+    "@testing-library/user-event": "^14.6.1",
+    "global-jsdom": "^29.0.0",
+    "jsdom": "^25",
+    "react": "19",
+    "react-dom": "19",
+    "tailwindcss": "^4.1.18"
+  }
+}
