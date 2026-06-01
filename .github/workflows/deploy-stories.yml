@@ -15,5 +15,40 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    uses: rowtype-yoga/purescript-yoga-stories/.github/workflows/deploy-stories.yml@v0.1.13
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: purescript-contrib/setup-purescript@main
+        with:
+          purescript: "0.15.15"
+          spago: "0.93.42"
+
+      - run: npm install -g purs-backend-es@1.4.2
+
+      - name: Install JS dependencies
+        run: |
+          rm -f bun.lock
+          npm install
+          test -f node_modules/vite/dist/node/chunks/config.js || npm install vite@7.3.1
+
+      - run: spago build
+
+      - run: npx yoga-stories build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
