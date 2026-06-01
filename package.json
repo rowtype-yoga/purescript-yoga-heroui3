@@ -5,7 +5,7 @@
   "dependencies": {
     "@heroui/react": "^3.1.0",
     "@heroui/styles": "^3.1.0",
-    "yoga-stories": "0.1.5"
+    "yoga-stories": "0.1.13"
   },
   "peerDependencies": {
     "react": ">=19",

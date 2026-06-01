@@ -76,6 +76,10 @@
       "react-testing-library": {
         "git": "https://github.com/i-am-the-slime/purescript-react-testing-library.git",
         "ref": "fd679db77337485058907ba5c6cbac3b478de342"
+      },
+      "yoga-stories": {
+        "git": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
+        "ref": "v0.1.13"
       }
     }
   },
@@ -1532,9 +1536,9 @@
       ]
     },
     "yoga-stories": {
-      "type": "registry",
-      "version": "0.1.0",
-      "integrity": "sha256-8T+wUThPhXYH2MgSoe1/JjEmUnABk2A012wHliNLLcE=",
+      "type": "git",
+      "url": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
+      "rev": "8352da39a4d48dbb57416e1239692401b89a12fe",
       "dependencies": [
         "aff",
         "arrays",
